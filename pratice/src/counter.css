@@ -1,0 +1,10 @@
+
+.main{
+    display: flexbox;
+}
+
+.teemo{
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30rem;
+}
