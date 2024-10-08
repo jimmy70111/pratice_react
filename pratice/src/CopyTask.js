@@ -57,7 +57,7 @@
 
         <button onClick={addTask}>enter task</button>
 
-        <div>  Tasks
+        <div>  Tasks {task}
         <ul>
     {tasks.map((item,index) =>(
                 <li key={index}>
