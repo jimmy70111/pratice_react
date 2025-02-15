@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './counter.css';
 
 const Counter = () => {
-    const [count, setCount] = useState(10); 
+    const [count, setCount] = useState(100); 
     const [res, setRes] = useState([]); 
     const [task, setTask] = useState('');
 
@@ -12,7 +12,7 @@ const Counter = () => {
     };
 
     const reset = () => {
-        setCount(10);
+        setCount(0);
         setRes([]); // Reset the res array
     };
 
@@ -25,6 +25,9 @@ const Counter = () => {
     const handleInputChange = (e) => {
         setTask(e.target.value);
     };
+
+
+
 
     useEffect(() => {
         // Log current count whenever it changes
@@ -40,6 +43,8 @@ const Counter = () => {
     return (
         <div className='main'> 
             <h1 className='teemo'> Current Number: {count} !</h1>
+            <h2 className='teemo'> Current : {count} !</h2>
+
 
             {/* Render the Test component */}
             <h2> 
@@ -48,7 +53,7 @@ const Counter = () => {
 
             {/* Counter buttons */}
             <button onClick={handle}>Increase</button>
-            <button onClick={() => setCount(count - 1)}>Decrease</button>
+            <button onClick={() => setCount(count => count - 10)}>Decrease</button> 
             <button onClick={() => setCount(count * 2)}>Times 2</button>
             <button onClick={reset}>Reset</button>
 
