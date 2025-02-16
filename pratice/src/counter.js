@@ -17,9 +17,14 @@ const Counter = () => {
     };
 
     // Define the Test component as a constant using an arrow function
+
+    const [name, setName] = useState(" ");
+
+
     const Test = (props) => {
-        return <h1>hi {props.name} and bye </h1>;
+        return <h1>hi {props.ashe} and bye  :{name}</h1>;
     };
+
 
 
     const handleInputChange = (e) => {
@@ -40,21 +45,35 @@ const Counter = () => {
 
 
 
+
+    useEffect(() => {    
+        if (count === 100) {
+          console.log("Count reached 100!  ");
+        }
+    
+      }, [count]);
+
+
+
     return (
-        <div className='main'> 
+        <div className= 'main'> 
             <h1 className='teemo'> Current Number: {count} !</h1>
             <h2 className='teemo'> Current : {count} !</h2>
 
 
-            {/* Render the Test component */}
-            <h2> 
-                <Test name="zz" />
-            </h2>
+         
+            <div> 
+                <Test ashe="jimmy" />
+                <button onClick={() => setName("hummy")}> set name </button>
+
+            </div>
 
             {/* Counter buttons */}
             <button onClick={handle}>Increase</button>
             <button onClick={() => setCount(count => count - 10)}>Decrease</button> 
             <button onClick={() => setCount(count * 2)}>Times 2</button>
+            <button onClick={() => setCount(count  / 2)}> Divid </button>
+
             <button onClick={reset}>Reset</button>
 
             {/* Display res array */}
