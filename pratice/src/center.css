@@ -13,3 +13,11 @@
     justify-content: center;
 
 }
+
+.hummy {
+    display: flex;
+    position: relative;
+    top: 500px; /* Moves it 50px down */
+    justify-content: center;
+
+}
