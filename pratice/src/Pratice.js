@@ -14,6 +14,43 @@ const Pratice = () => {
 
     //Two sum
 
+    const[twoSumArray, settwoSumArray] = useState([]);
+    const[target, settarget] = useState(0);
+    const[result, setreult]  = useState([]);
+
+
+
+
+
+    const handleArrayChange = (value) => {
+        const array = value.split(",").map((num) => parseInt(num.trim(), 10));
+        settwoSumArray(array);
+      };
+    
+
+
+    const twoSum = () =>{
+        const map = new Map();
+        const n  = twoSumArray.length;
+
+        for (let index = 0; index < n; index++) {
+
+            const temp = target -twoSumArray[index];
+            
+            if(map.has(temp)){
+                setreult([map.get(temp), index]);
+                return;
+            }
+
+            map.set(twoSumArray[index], index);
+            
+        }
+
+        setreult(["No valid pair found"]);
+
+
+    }
+
 
 
 
@@ -90,13 +127,30 @@ const Pratice = () => {
 
 
         <div>  
+            <p> enter target : </p>
         <input 
                     type="text" 
-                    placeholder="Type something..." 
-                    value={userInput} 
-                    onChange={(e) => SetuserInput(e.target.value)} 
+                    placeholder=" Enter an target to find in the array " 
+                    value={target} 
+                    onChange={(e) => settarget( parseInt(e.target.value,10) || 0)} 
                 />
+    
+
+  
+            <p> enter twoSum Array : </p>
+            <input
+        type="text"
+        placeholder="Enter array (comma-separated)"
+        // value={twoSumArray}
+        onChange={(e) => handleArrayChange(e.target.value)}
+      />
+                
+                
+                
+                <button  onClick={twoSum}>  Get twoSum: [{result.join(', ')}]</button>
+
         </div>
+
 
 
 
