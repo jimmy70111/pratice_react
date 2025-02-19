@@ -5,7 +5,7 @@ const Pratice = () => {
 
     const [count , setCount] =  useState(10);
     const [array , setarr] =  useState([]);
-    const [name ,  setName] =  useState({ name: "jimmy" , age: 24,  arr: [1,2,3] });
+    const [name ,  setName] =  useState({ name: "jimmy" , age: 26,  arr: [1,2,3] });
     const [userInput, SetuserInput] = useState(" ");
 
 
@@ -107,7 +107,7 @@ const Pratice = () => {
         <input 
                     type="text" 
                     placeholder="Type something..." 
-                    value={userInput} 
+                    // value={userInput} 
                     onChange={(e) => SetuserInput(e.target.value)} 
                 />
 
@@ -131,7 +131,7 @@ const Pratice = () => {
         <input 
                     type="text" 
                     placeholder=" Enter an target to find in the array " 
-                    value={target} 
+                    // value={target} 
                     onChange={(e) => settarget( parseInt(e.target.value,10) || 0)} 
                 />
     
