@@ -149,6 +149,12 @@ const Pratice = () => {
                 
                 <button  onClick={twoSum}>  Get twoSum: [{result.join(', ')}]</button>
 
+
+            <button>  get Min in the array </button>
+            <button>  get Max  in the array </button>
+
+
+
         </div>
 
 
