@@ -33,7 +33,7 @@ const Pratice = () => {
 
     const findMin = () =>{
 
-        const currentmin = 10000;
+        let currentmin = Infinity;
 
         for (let index = 0; index < twoSumArray.length; index++) {
             if(twoSumArray[index] < currentmin ){
@@ -50,7 +50,7 @@ const Pratice = () => {
 
     const findMax = () =>{
 
-        const currentmax = 0;
+        let currentmax = -Infinity; 
 
         for (let index = 0; index < twoSumArray.length; index++) {
             if(twoSumArray[index] > currentmax ){
@@ -186,8 +186,8 @@ const Pratice = () => {
                 <button  onClick={twoSum}>  Get twoSum: [{result.join(', ')}]</button>
 
 
-            <button  onClick={findMin}>  get Min in the array </button>
-            <button onClick={findMax}>  get Max  in the array </button>
+            <button  onClick={findMin}>  get Min in the array : {min}</button>
+            <button onClick={findMax}>  get Max  in the array : {max}</button>
 
 
 
