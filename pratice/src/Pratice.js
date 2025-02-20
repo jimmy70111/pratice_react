@@ -50,6 +50,18 @@ const Pratice = () => {
 
     const findMax = () =>{
 
+        const currentmax = 0;
+
+        for (let index = 0; index < twoSumArray.length; index++) {
+            if(twoSumArray[index] > currentmax ){
+                currentmax = twoSumArray[index];
+            }
+            
+        }
+
+        setMax(currentmax);
+
+
     }
     
 
