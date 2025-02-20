@@ -48,6 +48,13 @@ const Pratice = () => {
 
     }
 
+
+        useEffect(() => {
+        if (twoSumArray.length > 0) {
+            setMin(Math.min(...twoSumArray)); // Automatically updates min
+        }
+    }, [twoSumArray]); // Runs whenever twoSumArray changes
+
     const findMax = () =>{
 
         let currentmax = -Infinity; 
