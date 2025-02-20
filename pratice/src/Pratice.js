@@ -8,6 +8,10 @@ const Pratice = () => {
     const [name ,  setName] =  useState({ name: "jimmy" , age: 26,  arr: [1,2,3] });
     const [userInput, SetuserInput] = useState(" ");
 
+    const [min, setMin] = useState(0);
+    const [max, setMax] = useState(0);
+
+
 
 
 
@@ -150,8 +154,8 @@ const Pratice = () => {
                 <button  onClick={twoSum}>  Get twoSum: [{result.join(', ')}]</button>
 
 
-            <button>  get Min in the array </button>
-            <button>  get Max  in the array </button>
+            <button  onClick={}>  get Min in the array </button>
+            <button onClick={}>  get Max  in the array </button>
 
 
 
