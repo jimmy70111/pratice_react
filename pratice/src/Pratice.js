@@ -30,8 +30,28 @@ const Pratice = () => {
         const array = value.split(",").map((num) => parseInt(num.trim(), 10));
         settwoSumArray(array);
       };
-    
 
+    const findMin = () =>{
+
+        const currentmin = 10000;
+
+        for (let index = 0; index < twoSumArray.length; index++) {
+            if(twoSumArray[index] < currentmin ){
+                currentmin = twoSumArray[index];
+            }
+            
+        }
+
+        setMin(currentmin);
+
+
+
+    }
+
+    const findMax = () =>{
+
+    }
+    
 
     const twoSum = () =>{
         const map = new Map();
@@ -154,8 +174,8 @@ const Pratice = () => {
                 <button  onClick={twoSum}>  Get twoSum: [{result.join(', ')}]</button>
 
 
-            <button  onClick={}>  get Min in the array </button>
-            <button onClick={}>  get Max  in the array </button>
+            <button  onClick={findMin}>  get Min in the array </button>
+            <button onClick={findMax}>  get Max  in the array </button>
 
 
 
