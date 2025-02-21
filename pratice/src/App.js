@@ -5,6 +5,7 @@ import Counter from './counter';
 import Task from './task';
 import CopyTask from './CopyTask';
 import Pratice from './Pratice';
+import DogFetcher  from './DogFetcher';
 
     function App() {
   return (
@@ -14,6 +15,7 @@ import Pratice from './Pratice';
         <Route path='/task' element= {<Task/> } />
         <Route path='/pratice' element= {<Pratice/> } />
         <Route path='/Ctask' element= {<CopyTask/> } />
+        <Route path='/Dog' element= {<DogFetcher/> } />
 
       </Routes>
     </Router>
