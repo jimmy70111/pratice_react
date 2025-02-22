@@ -7,10 +7,9 @@ const Pratice = () => {
     const [array , setarr] =  useState([]);
     const [name ,  setName] =  useState({ name: "jimmy" , age: 26,  arr: [1,2,3] });
     const [userInput, SetuserInput] = useState(" ");
-
     const [min, setMin] = useState(0);
     const [max, setMax] = useState(0);
-
+     const [factorial,  setfactorial] = useState();
 
 
 
@@ -49,6 +48,15 @@ const Pratice = () => {
     }
 
 
+    const fact = (n) => {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        return n * fact(n - 1);
+    };
+    
+
+
         useEffect(() => {
         if (twoSumArray.length > 0) {
             setMin(Math.min(...twoSumArray)); // Automatically updates min
@@ -62,6 +70,7 @@ const Pratice = () => {
         for (let index = 0; index < twoSumArray.length; index++) {
             if(twoSumArray[index] > currentmax ){
                 currentmax = twoSumArray[index];
+
             }
             
         }
@@ -70,6 +79,9 @@ const Pratice = () => {
 
 
     }
+
+
+
     
 
     const twoSum = () =>{
@@ -177,7 +189,10 @@ const Pratice = () => {
                     // value={target} 
                     onChange={(e) => settarget( parseInt(e.target.value,10) || 0)} 
                 />
-    
+
+<button onClick={() => setfactorial((fact(target))) }>
+                Calculate Factorial: {factorial}
+            </button>    
 
   
             <p> enter twoSum Array : </p>
